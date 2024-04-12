@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase Prediction</title>
+    <title>Login - ResumeCraft</title>
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -24,9 +24,6 @@
     <!-- Website LOGO -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap')
-    </style>
     <!-- Website title -->
     <title>
         Login - ResumeCraft
@@ -39,18 +36,18 @@
         justify-content: center;
         background-color: #21D4FD;
         background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
-        height: 100vh;
+        height: 95vh;
+        font-family: "Montserrat", sans-serif;
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto;
-        font-family: "Platypi", serif;
     }
 
     .mainSection {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 50vw;
+        max-width: 80vw;
         color: rgb(93, 42, 42);
     }
 
@@ -73,7 +70,6 @@
         font-size: 17px;
         margin: 1em;
         outline: none;
-        text-align: center;
     }
 
     .inpBox {
@@ -81,43 +77,60 @@
         flex-direction: column;
         padding: 1rem;
     }
+
 </style>
 
 <body>
     <div class="container ">
         <div class="card LoginPage">
-            <div class="row mt-5 "></div>
-            <div class="col-md-12 mediaPadding text-center ">
+            <div class="row">
 
-                <h1 class="justify-content-center ">Costumer Behaviour Model!</h1>
-                <span class="fw-bold ">Welcome!!!</span>
+                <div class="col-md-5 imageSection">
+                    <div class="text-center ">
+                        <a href="index.html">
+                            <img src="moblogo.png" alt="weblogo" class="m-hide footer-image w-50"
+                                style="margin: 8rem;" />
+                            <img src="desklogo.png" alt="weblogo" class="d-hide footer-image mt-5  w-25 " />
+                        </a>
+                        <br><br>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5 mediaPadding text-center ">
 
-                <form id="prediction-form">
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="gender" style="outline: none; border-radius: 1rem;">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                    <br>
-                    <label for="age">Age:</label>
-                    <input type="number" name="age" id="age" required>
-                    <br>
-                    <label for="salary">Salary:</label>
-                    <input type="number" name="salary" id="salary" required>
-                    <br>
-                    <label for="price">Product Price:</label>
-                    <input type="number" name="price" id="price" required>
-                    <br>
-                    <button type="submit">Predict Purchase</button>
-                </form>
-                <p id="prediction"></p>
-                <script src="script.js"></script>
-                
+                    <h1 class="justify-content-center ">Welcome Back!</h1>
+                    <span>Please Login to Your Account</span>
+
+                    <form action="/users/loginForm" method="post">
+
+                        <div class="inpBox">
+
+                            <input type="email" name="email" id="" placeholder="Email" required="">
+                        </div>
+
+                        <div class="inpBox">
+
+                            <input type="password" name="password" placeholder="Password" id="" required="">
+                        </div>
+
+
+
+
+                        <div class="submit">
+                            <button class="button-md mt-4"> Login</button>
+                        </div>
+
+                    </form>
+
+
+
+                    <p>Don't Have an Account ? <span><a href="registratonPage.html" class="text-decoration-none text-danger">Register Now</a> </span> </p>
+                </div>
+                <div class="col-md-1"></div>
             </div>
+            <!-- row end -->
         </div>
-        <!-- row end -->
-    </div>
-    <!-- card end -->
+        <!-- card end -->
     </div>
     <!-- container end -->
 
